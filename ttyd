@@ -10,7 +10,7 @@ command_args="-p 80 /bin/bash"
 command_background="yes"
 
 start_pre() {
-        checkpath --directory --owner nginx:nginx ${pidfile%/*}
+        checkpath --directory --owner root:root ${pidfile%/*}
 }
 
 checkconfig() {
