@@ -9,6 +9,10 @@ command="/usr/bin/ttyd"
 command_args="-p 80 /bin/bash"
 command_background="yes"
 
+start_pre() {
+        checkpath --directory --owner nginx:nginx ${pidfile%/*}
+}
+
 checkconfig() {
         ebegin "Checking $RC_SVCNAME configuration"
         eend $?
