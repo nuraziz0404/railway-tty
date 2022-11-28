@@ -10,6 +10,6 @@ run chmod a+x /etc/init.d/ttyd /usr/bin/ttyd
 run rc-update add ttyd default
 
 run sed -i -- 's/tty/#tty/g' /etc/inittab
-volume ["/sys/fs/cgroup"]
+# volume ["/sys/fs/cgroup"]
 
 cmd /sbin/init
